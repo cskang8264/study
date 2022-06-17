@@ -11,3 +11,15 @@ spring:
     properties:
       show_sql: true
       format_sql: true
+
+  devtools:
+    livereload:
+      enabled: true
+
+  resources:
+    static-locations: file:src/main/resources/static/
+
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+
