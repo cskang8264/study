@@ -3,6 +3,8 @@
 
 ## 김영한님 인프런 강의 첼린지
 
+- Java 11 
+
 - 스프링 통합 테스트 스프링 JdbcTemplate JPA
 - 스프링 데이터 JPA
 
