@@ -2,7 +2,9 @@ package com.spring.study.spring_study.service;
 
 import com.spring.study.spring_study.domain.Member;
 import com.spring.study.spring_study.respository.MemoryMemberRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -13,9 +15,20 @@ class MemberServiceTest {
 // command + shift + t 테스트 코드 껍데기 자동생성...
 
 
-    MemberService memberService = new MemberService(new MemoryMemberRepository());
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;
 
 
+    @BeforeEach
+    public void beforeEach() {
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
+
+    @AfterEach
+    public void afterEach() {
+        memberRepository.clearStore();
+    }
     @Test
     void join() {
         //given
