@@ -20,4 +20,6 @@ import org.springframework.context.annotation.Configuration;
 //    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
 //    }
+
+// db를 바꿀경우 여기만 손대면 컨트롤러, 서비스단은 건들이지 않아도 되는 장점이있다
 //}
