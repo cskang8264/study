@@ -11,6 +11,8 @@ public class MemoryMemberRepository implements MemberRepository {
     private static long sequence = 0L;
     //동시성 문제(멀티쓰레딩)을 생각하면 AtomicLong이 적절
 
+
+
     @Override
     public Member save(Member member) {
         member.setId(++sequence);
