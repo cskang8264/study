@@ -115,7 +115,6 @@ class MemberServiceTest {
             }
         }
 
-        return result;
 
     }
 }
